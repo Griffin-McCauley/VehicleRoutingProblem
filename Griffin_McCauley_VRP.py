@@ -1,3 +1,4 @@
+# import necessary libraries
 import io
 import math
 import numpy as np
@@ -5,7 +6,7 @@ import copy
 import time
 import argparse
 
-##### THE FOLLOWING HELPER FUNCTIONS AND CLASSES COME FROM evaluateShared.py AND ARE SIMPLY UTILIZED TO PULL IN AND ORGANIZE THE LOAD DATA IN A MANNER THAT IS CONSISTENT WITH YOUR SYSTEM #####
+##### THE FOLLOWING HELPER FUNCTIONS AND CLASSES COME FROM evaluateShared.py AND ARE SIMPLY UTILIZED TO PULL IN AND ORGANIZE THE LOAD DATA IN A MANNER THAT IS CONSISTENT WITH THE OVERALL SYSTEM #####
 
 class Point:
     def __init__(self, x, y):
@@ -57,7 +58,8 @@ def loadProblemFromProblemStr(problemStr):
         loads.append(Load(id, pickup, dropoff))
     return VRP(loads)
 
-##### THE FOLLOWING SECTION CONTAINS MY ALGORITHMS AND PROGRAM FOR SOLVING THIS VERSION OF THE VEHICLE ROUTING PROBLEM #####
+
+##### THE FOLLOWING SECTION CONTAINS MY CUSTOM CLASSES, FUNCTIONS, ALGORITHMS, AND PROGRAM FOR SOLVING THIS VERSION OF THE VEHICLE ROUTING PROBLEM #####
 
 
 def generateDistanceArrays(VehicleRoutingProblem):
