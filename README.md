@@ -50,9 +50,11 @@ The program described above and implemented in Python in `Griffin_McCauley_VRP.p
 ## References
 
 1. https://iopscience.iop.org/article/10.1088/1742-6596/2421/1/012027/pdf
+
 This article provided the initial inspiration to adopt a Nearest Neighbor algorithm approach.
 
 2. https://medium.com/@writingforara/solving-vehicle-routing-problems-with-python-heuristics-algorithm-2cc57fe7079c
+
 This blog post encouraged the pursuit of layering an additional 2-Opt optimization approach on top of the Nearest Neighbor heuristic solution.
 
 Other resources that were beneficial for gaining a deeper understanding of the problem space can be found below:
