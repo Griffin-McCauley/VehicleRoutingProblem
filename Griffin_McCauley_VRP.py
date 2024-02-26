@@ -173,7 +173,9 @@ def runNearestNeighborAlgorithm(num_loads,
         # continue adding loads to the current driver's route following a Nearest Neighbor approach until the maximum drive time stopping condition is met
         terminate_route = False
         while not terminate_route:
+            # sort the next loads to consider delivering based on their pickup locations' distances from the current load's dropoff location
             next_load_indices = np.argsort(temp_distance_from_dropoffs_to_pickups[current_load_index])
+            # let the nearest load whose marginal delivery time allows the current route's cumulative drive time to satisfy the maxmimum allowable drive time constraint be the next load delivered
             for next_load_index in next_load_indices:
                 next_drive_time = current_drive_time + \
                                   temp_distance_from_dropoffs_to_pickups[current_load_index][next_load_index] + \
