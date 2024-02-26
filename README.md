@@ -13,7 +13,7 @@ In this specific problem, the number of vehicles and drivers that can be utilize
 
 The total cost function attempting to be optimized is defined as `500*number_of_drivers + total_number_of_driven_minutes`, so the goal of this exercise is to produce a program that yields a solution that has a low total cost within a reasonable amount of time (<30 seconds).
 
-(Note taht no problems provided here will contain more than 200 loads and all loads will be possible to complete within a single 12-hour driving shift. Therefore, all problems will be solvable and the program devised does not need to assess solution feasibility.)
+(Note that no problems provided here will contain more than 200 loads and all loads will be possible to complete within a single 12-hour driving shift. Therefore, all problems will be solvable and the program devised does not need to assess solution feasibility.)
 
 ## Methodology
 
