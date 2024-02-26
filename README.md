@@ -11,13 +11,13 @@ By definition, a delivery is completed by traveling to the pickup location, pick
 
 In this specific problem, the number of vehicles and drivers that can be utilized to deliver the assigned loads is unbounded, but no driver's shift can exceed 12 hours in duration before returning to the depot located at the origin (0,0). One unit of distance in this plane can be traveresed in one minute, so an individual driver's total route distance must be less than 12*60=720 units in length.
 
-The total cost function attempting to be optimized is defined as 500*number_of_drivers + total_number_of_driven_minutes, so the goal of this exercise is to produce a program that yields a solution that has a low total cost within a reasonable amount of time (<30 seconds).
+The total cost function attempting to be optimized is defined as `500*number_of_drivers + total_number_of_driven_minutes`, so the goal of this exercise is to produce a program that yields a solution that has a low total cost within a reasonable amount of time (<30 seconds).
 
 (Note: No problems provided here will contain more than 200 loads and all loads will be possible to complete within a single 12-hour driving shift. Therefore, all problems will be solvable and the program devised does not need to assess solution feasibility.)
 
 ## Methodology
 
-The program implemented in Griffin_McCauley_VRP.py consists of an intial solution being generated via a Nearest Neighbor heuristic approach followed by a secondary, local search process employing 2-Opt optimization.
+The program implemented in `Griffin_McCauley_VRP.py` consists of an intial solution being generated via a Nearest Neighbor heuristic approach followed by a secondary, local search process employing 2-Opt optimization.
 
 ### Nearest Neighbor Heuristic
 
@@ -41,11 +41,11 @@ Other metaheuristic-based approaches such as Genetic Algorithms, Tabu Search, Si
 
 This program can be executed for a specific VRP via the command line by running `python3 Griffin_McCauley_VRP.py {path_to_problem}`.
 
-Evaluating the program over all of the training problems provided in the trainingProblems folder can be achieved by running `python3 evaluateShared.py --cmd "python3 Griffin_McCauley_VRP.py" --problemDir trainingProblems`.
+Evaluating the program over all of the training problems provided in the `trainingProblems` folder can be achieved by running `python3 evaluateShared.py --cmd "python3 Griffin_McCauley_VRP.py" --problemDir trainingProblems`.
 
 ## Evaluation Results
 
-Evaluating the program described above (and implemented in Python in Griffin_McCauley_VRP.py), this methology is able to achieve an average total cost of **47945.39** on the problems contained within the trainingProblems folder of this repository.
+The program described above and implemented in Python in `Griffin_McCauley_VRP.py` is able to achieve an average total cost of **47945.39** when evaluated on the problems contained within the `trainingProblems` folder of this repository.
 
 ## References
 
@@ -56,11 +56,19 @@ This article provided the initial inspiration to adopt a Nearest Neighbor algori
 This blog post encouraged the pursuit of layering an additional 2-Opt optimization approach on top of the Nearest Neighbor heuristic solution.
 
 Other resources that were beneficial for gaining a deeper understanding of the problem space can be found below:
+
 3. https://en.wikipedia.org/wiki/Vehicle_routing_problem
+
 4. https://www.sciencedirect.com/science/article/abs/pii/S0305054802000515
+   
 5. https://medium.com/rideos/tabu-search-for-the-vehicle-routing-problem-b1fd993f4301
+   
 6. https://www.hindawi.com/journals/mpe/2019/2358258/
+   
 7. https://dial.uclouvain.be/memoire/ucl/en/object/thesis%3A4615/datastream/PDF_01/view
+
 8. https://d-nb.info/1072464683/34
+
 9. https://www.intechopen.com/online-first/87515
+
 10. https://en.wikipedia.org/wiki/2-opt
