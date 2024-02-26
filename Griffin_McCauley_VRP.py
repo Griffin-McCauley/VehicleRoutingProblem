@@ -267,9 +267,9 @@ def main():
 
     # instantiate an evaluator that can quickly and efficiently calculate individual route and total solution costs
     cost_evaluator = costEvaluator(distance_from_origin_to_pickups,
-                                              distance_from_pickups_to_dropoffs,
-                                              distance_from_dropoffs_to_pickups,
-                                              distance_from_dropoffs_to_origin)
+                                   distance_from_pickups_to_dropoffs,
+                                   distance_from_dropoffs_to_pickups,
+                                   distance_from_dropoffs_to_origin)
     
     # run the Nearest Neighbors algorithm to heuristically determine a strong initial solution
     best_routes, total_cost = runNearestNeighborAlgorithm(num_loads,
