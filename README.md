@@ -43,6 +43,8 @@ This program can be executed for a specific VRP via the command line by running 
 
 Evaluating the program over all of the training problems provided in the `trainingProblems` folder can be achieved by running `python3 evaluateShared.py --cmd "python3 Griffin_McCauley_VRP.py" --problemDir trainingProblems`.
 
+(Note that the only libraries utilized by this program are `io`,`math`,`numpy`,`copy`,`time`, and `argparse`. Most IDEs come with these libaries pre-installed, but, if they are not present in your current environment, please install these prior to running the program.)
+
 ## Evaluation Results
 
 The program described above and implemented in Python in `Griffin_McCauley_VRP.py` is able to achieve an average total cost of **47945.39** when evaluated on the problems contained within the `trainingProblems` folder of this repository.
